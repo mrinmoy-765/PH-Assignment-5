@@ -1,0 +1,48 @@
+.navbar-start {
+    width: 40%;
+}
+
+.btn-light-green-blog {
+    background-color: lightgreen;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn-light-green-blog:hover {
+    background-color: green;
+    color: white;
+}
+
+.btn-light-green {
+    background-color: lightgreen;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+    margin: .50rem 0;
+}
+
+.btn-light-green:hover {
+    background-color: green;
+    color: white;
+}
+
+.numberInput{
+    border: 1px solid black;
+    width: 100%;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    
+}
+
+footer{
+    background: rgb(249, 247, 243);
+    height: 7rem;
+    width: 100%;
+}
