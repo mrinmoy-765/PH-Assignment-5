@@ -5,9 +5,102 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.13/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../CSS/style.css">
     <title>Document</title>
 </head>
 <body>
-    
+    <!-- header start -->
+    <div class="navbar justify-around" style="background: rgb(249, 247, 243);">
+        <div class="navbar-start">
+            <a href="../View/home.html" class="btn btn-light-green-blog ml-32">Blog</a>
+        </div>
+        <div class="flex-1">
+            <img src="../assets/logo.png" alt="">
+            <p class="ml-2 font-bold text-xl">Donate Bangladesh</p>
+        </div>
+        <div class="flex-none">
+            <ul class="menu menu-horizontal px-1">
+                <img src="../assets/coin.png" alt="">
+                <li class="mr-32 font-bold text-base ml-2">5500 BDT</li>
+            </ul>
+        </div>
+    </div>
+    <!-- header end -->
+    <!-- question section starts here -->
+     <div class="mx-36 my-16">
+       <div class="mb-8">
+        <span class="text-2xl font-extrabold ">Important FAQ</span>
+        <i class="fa-regular fa-circle-question text-2xl ml-2"></i>
+       </div>
+        <div class="collapse collapse-arrow bg-base-200 mb-4">
+            <input type="radio" name="my-accordion-2" checked="checked" />
+            <div class="collapse-title text-xl font-medium">What is Document Object Model(DOM)?</div>
+            <div class="collapse-content">
+                <p><b>The Document Object Model (DOM)</b> is a programming interface provided by web browsers that allows developers to interact
+                with and manipulate the structure and content of a web page. When a web page is loaded, the browser converts the HTML
+                into a hierarchical tree of objects, known as the DOM tree. Each element, attribute, and piece of text in the HTML
+                document becomes a node in this tree. 
+                The DOM is essential for modern web development, as it provides the structure and programming interface that allows web
+                pages to be interactive and responsive. Through JavaScript, the DOM enables developers to create dynamic and
+                user-friendly websites.
+            </p>
+            </div>
+        </div>
+        <div class="collapse collapse-arrow bg-base-200 mb-4">
+            <input type="radio" name="my-accordion-2" />
+            <div class="collapse-title text-xl font-medium">How do you select an element from the DOM?</div>
+            <div class="collapse-content">
+                <p>To select an element from the DOM, we can use several methods provided by the `document` object, each with its specific
+                use case: <br>
+                
+                <b>1. By ID:</b> You can select an element using its unique `id` attribute. <br>
+                <b>2. By Class:</b> You can select elements based on their `class` attribute. <br>
+                <b>3. By Tag Name:</b> You can select elements by their HTML tag name. <br>
+                <b>4. By CSS Selector:</b> You can use a CSS selector to select one or more elements based on more complex rules like class, ID, attributes, etc. <br>
+                <b>5. By Name Attribute:</b> You can select elements with a specific `name` attribute, often used in forms. <br>
+                
+                These methods allow developers to target specific elements in the DOM for manipulation or interaction.</p>
+            </div>
+        </div>
+        <div class="collapse collapse-arrow bg-base-200 mb-4">
+            <input type="radio" name="my-accordion-2" />
+            <div class="collapse-title text-xl font-medium">What is elevent delegation in the context of the DOM, and why is it useful?</div>
+            <div class="collapse-content">
+                <p><b>Event delegation</b> is a technique in the DOM that allows you to handle events at a higher (parent) level rather than
+                adding individual event listeners to each child element. Instead of attaching event listeners to multiple child
+                elements, you attach a single event listener to their common ancestor. When an event occurs, it "bubbles up" to the
+                ancestor, where it can be captured and handled.  <br>
+               <b>Why Event Delegation is Useful:</b><br>
+                    <li>Improves performance</li>
+                    <li>Handles dynamic elements</li>
+                    <li>Simpler code management</li>
+            </p>
+            </div>
+        </div>
+        <div class="collapse collapse-arrow bg-base-200 mb-4">
+            <input type="radio" name="my-accordion-2" />
+            <div class="collapse-title text-xl font-medium">How do you manipulate  an element attributes and styles using the DOM?</div>
+            <div class="collapse-content">
+                <p>
+                    You can manipulate an element's attributes and styles in the DOM using JavaScript. Here's how you can do both: <br>
+                    <b>1. Manipulating Attributes:</b> <br>
+                    we can get, set, or remove attributes of an element using DOM methods.
+                    <li><b>Getting an attribute:</b> Use the getAttribute() method to retrieve the value of an attribute.</li>
+                    <li><b>Setting an attribute:</b>Use the setAttribute() method to add or update an attribute.</li>
+                    <li><b>Removing an attribute:</b>Use the removeAttribute() method to remove an attribute.</li> <br>
+                    <b>2. Manipulating Styles:</b> <br>
+                    You can manipulate an element's CSS styles directly using the style property in JavaScript.
+                    <li><b>Inline style:</b>Use the style property to modify an element's CSS properties directly.</li>
+                    <li><b>CSS class manipulation:</b>Use classList methods to add, remove, toggle, or check for a class.</li>
+                </p>
+            </div>
+        </div>
+     </div>
+    <!-- question section ends here -->
+     <footer>
+     </footer>
 </body>
 </html>
