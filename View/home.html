@@ -21,7 +21,7 @@
         <div class="flex-none">
             <ul class="menu menu-horizontal px-1">
                 <img src="../assets/coin.png" alt="">
-                <li class="mr-32 font-bold text-base ml-2">5500 BDT</li>
+                <li id="Balance" class="mr-32 font-bold text-base ml-2">5500 BDT</li>
             </ul>
         </div>
     </div>
@@ -44,7 +44,7 @@
             <div class="card-body w-2/3">
                 <div class="show-collection flex items-center">
                     <img src="../assets/coin.png" alt="coin image" class="w-8 h-8">
-                    <span class="ml-2">0 BDT</span>
+                    <span id="campOneCollection" class="ml-2">0 BDT</span>
                 </div>
 
                 <h2 class="card-title">Donate for Flood at Noakhali, Bangladesh</h2>
@@ -52,8 +52,8 @@
                 essential supplies and to those affected by this disaster. Every contribution, big or small, makes difference. Please
                 join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
                 <form>
-                    <input type="text" class="numberInput" name="numberInput" placeholder="Write Donation Amount" required>
-                    <button type="submit" class="btn-light-green font-bold">Donate Now</button>
+                    <input type="text" id="donateBox1" class="numberInput" name="numberInput" placeholder="Write Donation Amount" required>
+                    <button type="submit" id="donateBoxBtn1"  class="btn-light-green font-bold">Donate Now</button>
                 </form>
             </div>
         </div>
@@ -65,7 +65,7 @@
             <div class="card-body w-2/3">
                 <div class="show-collection flex items-center">
                     <img src="../assets/coin.png" alt="coin image" class="w-8 h-8">
-                    <span class="ml-2">0 BDT</span>
+                    <span id="campTwoCollection" class="ml-2">0 BDT</span>
                 </div>
                 <h2 class="card-title">Donate for Flood Relief in Feni,Bangladesh</h2>
                 <p>The recent floods in Feni have devastated local communities, leading to severe disruption and loss. Your generous
@@ -86,7 +86,7 @@
             <div class="card-body w-2/3">
                 <div class="show-collection flex items-center">
                     <img src="../assets/coin.png" alt="coin image" class="w-8 h-8">
-                    <span class="ml-2">0 BDT</span>
+                    <span id="campThreeCollection" class="ml-2">0 BDT</span>
                 </div>
                 <h2 class="card-title">Aid for Injured in the Quota Movement</h2>
                 <p>The recent Quota movement has resulted in numerous injuries and significant hardship for many individuals. Your support
@@ -102,8 +102,11 @@
         </div>
     </div>
     <!-- card container/body ends here -->
-     <footer>
+<footer>
+</footer>
+    <script type="module" src="../JS/blog.js"></script>
+    <script type="module" src="../JS/home.js"></script>
+    <script type="module" src="../JS/utils.js"></script>
 
-     </footer>
 </body>
 </html>
