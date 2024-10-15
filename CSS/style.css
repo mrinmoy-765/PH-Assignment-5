@@ -46,3 +46,23 @@ footer{
     height: 7rem;
     width: 100%;
 }
+
+.card figure {
+    display: flex;
+    align-items: center;
+    padding: 2rem 0rem;
+ 
+}
+
+.show-collection{
+width: 138px;
+    height: 44px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8;
+    padding: 10px 16px 10px 16px;
+background: rgba(17, 17, 17, 0.05);
+border-radius: 8px;
+}
