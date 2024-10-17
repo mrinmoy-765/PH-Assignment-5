@@ -7,13 +7,19 @@ document.getElementById('donateBoxBtn1')
 
      const donateBoxOneValue = getInputFieldValueById('donateBox1');
      let balance = getTextFieldValueById('Balance');
-     let campOneCollection = getTextFieldValueById('campOneCollection');
-     let TotalCampOneCollection = campOneCollection += donateBoxOneValue;
-     let newBalance = balance -= donateBoxOneValue;
-    document.getElementById('campOneCollection').innerText = TotalCampOneCollection;
-    document.getElementById('Balance').innerText = newBalance;
 
-    // console.log(TotalCampOneCollection);
+       if(donateBoxOneValue <= balance){
+         let campOneCollection = getTextFieldValueById('campOneCollection');
+         let TotalCampOneCollection = campOneCollection += donateBoxOneValue;
+         let newBalance = balance -= donateBoxOneValue;
+         document.getElementById('campOneCollection').innerText = TotalCampOneCollection;
+         document.getElementById('Balance').innerText = newBalance;
+       }else{
+        alert("Insufficent Balance!!!");
+
+       }
+     
+
 })
 
 document.getElementById('donateBoxBtn2')
@@ -22,13 +28,18 @@ document.getElementById('donateBoxBtn2')
 
      const donateBoxTwoValue = getInputFieldValueById('donateBox2');
      let balance = getTextFieldValueById('Balance');
-     let campTwoCollection = getTextFieldValueById('campTwoCollection');
-     let TotalCampTwoCollection = campTwoCollection += donateBoxTwoValue;
-     let newBalance = balance -= donateBoxTwoValue;
-    document.getElementById('campTwoCollection').innerText = TotalCampTwoCollection;
-    document.getElementById('Balance').innerText = newBalance;
 
-    // console.log(TotalCampOneCollection);
+
+    if(donateBoxTwoValue <= balance){
+        let campTwoCollection = getTextFieldValueById('campTwoCollection');
+        let TotalCampTwoCollection = campTwoCollection += donateBoxTwoValue;
+        let newBalance = balance -= donateBoxTwoValue;
+        document.getElementById('campTwoCollection').innerText = TotalCampTwoCollection;
+        document.getElementById('Balance').innerText = newBalance;
+    }else{
+        alert("Insufficent Balance!!!");
+    }
+  
 })
 
 document.getElementById('donateBoxBtn3')
@@ -37,13 +48,20 @@ document.getElementById('donateBoxBtn3')
 
      const donateBoxThreeValue = getInputFieldValueById('donateBox3');
      let balance = getTextFieldValueById('Balance');
-     let campThreeCollection = getTextFieldValueById('campThreeCollection');
-     let TotalCampThreeCollection = campThreeCollection += donateBoxThreeValue;
-     let newBalance = balance -= donateBoxThreeValue;
-    document.getElementById('campThreeCollection').innerText = TotalCampThreeCollection;
-    document.getElementById('Balance').innerText = newBalance;
+   
+     if(donateBoxThreeValue <= balance){
+        let campThreeCollection = getTextFieldValueById('campThreeCollection');
+        let TotalCampThreeCollection = campThreeCollection += donateBoxThreeValue;
+        let newBalance = balance -= donateBoxThreeValue;
+        document.getElementById('campThreeCollection').innerText = TotalCampThreeCollection;
+        document.getElementById('Balance').innerText = newBalance;
+     }else{
+        alert("Insufficent Balance!!!");
+     }
 
-    // console.log(TotalCampOneCollection);
+     
+
+   
 })
 
 
