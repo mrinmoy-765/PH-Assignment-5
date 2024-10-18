@@ -5,7 +5,7 @@ document.getElementById('donateBoxBtn1')
 .addEventListener(`click`, function(event){
     event.preventDefault();
 
-     const donateBoxOneValue = getInputFieldValueById('donateBox1');
+     let donateBoxOneValue = getInputFieldValueById('donateBox1');
      let balance = getTextFieldValueById('Balance');
 
        if(donateBoxOneValue <= balance){
@@ -14,6 +14,7 @@ document.getElementById('donateBoxBtn1')
          let newBalance = balance -= donateBoxOneValue;
          document.getElementById('campOneCollection').innerText = TotalCampOneCollection;
          document.getElementById('Balance').innerText = newBalance;
+         document.getElementById('donateBox1').value = "";
          const date = new Date();
          
         //add transaction history
@@ -50,6 +51,7 @@ document.getElementById('donateBoxBtn2')
         let newBalance = balance -= donateBoxTwoValue;
         document.getElementById('campTwoCollection').innerText = TotalCampTwoCollection;
         document.getElementById('Balance').innerText = newBalance;
+        document.getElementById('donateBox2').value = "";
         const date = new Date();
 
         //add transaction history
@@ -80,6 +82,7 @@ document.getElementById('donateBoxBtn3')
         let newBalance = balance -= donateBoxThreeValue;
         document.getElementById('campThreeCollection').innerText = TotalCampThreeCollection;
         document.getElementById('Balance').innerText = newBalance;
+        document.getElementById('donateBox3').value = "";
         const date = new Date();
 
          //add transaction history
