@@ -28,14 +28,14 @@
     <!-- header end -->
     <!-- Navigation button -->
     <div class="flex justify-center mt-12">
-        <button class="btn font-bold">Donation</button>
-        <button class="btn font-bold ml-4">History</button>
+        <button id="show-donation" class="btn font-bold" style="background-color: lightgreen;">Donation</button>
+        <button id="show-history" class="btn font-bold ml-4">History</button>
     </div>
 
 
 
     <!-- card container/body start here -->
-    <div class="mx-36 pt-0 pb-16">
+    <div id="donation" class="mx-36 pt-0 pb-16">
         <!-- first card -->
         <div class="card lg:card-side bg-base-100 shadow-xl border-2 px-8 py-0 my-8">
             <figure class="w-1/3">
@@ -103,7 +103,7 @@
     </div>
     <!-- card container/body ends here -->
     <!-- Transaction History Form starts here-->
-    <div class="mx-36 pt-0 mb-16 border-2 border-gray rounded-lg h-32 flex items-center justify-center">
+    <div id="history" class="mx-36 mt-12 mb-16 border-2 border-gray rounded-lg h-32 flex items-center justify-center hidden">
         <p>Transaction history</p>
     </div>
 

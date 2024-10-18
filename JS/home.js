@@ -1,4 +1,4 @@
-import { getInputFieldValueById } from './utils.js';
+import { getInputFieldValueById, showSectionById } from './utils.js';
 import { getTextFieldValueById } from './utils.js';
 
 document.getElementById('donateBoxBtn1')
@@ -58,11 +58,32 @@ document.getElementById('donateBoxBtn3')
      }else{
         alert("Insufficent Balance!!!");
      }
-
-     
-
    
 })
+
+document.getElementById('show-history')
+.addEventListener('click', function() {
+    // Show history section
+    showSectionById('history');
+
+    // Change the clicked button's background color to light green
+    this.style.backgroundColor = 'lightgreen';
+
+    // Reset the donation button to its original state (default style)
+    document.getElementById('show-donation').style.backgroundColor = '';
+});
+
+document.getElementById('show-donation')
+.addEventListener('click', function() {
+    // Show donation section
+    showSectionById('donation');
+
+    // Change the clicked button's background color to light green
+    this.style.backgroundColor = 'lightgreen';
+
+    // Reset the history button to its original state (default style)
+    document.getElementById('show-history').style.backgroundColor = '';
+});
 
 
 
