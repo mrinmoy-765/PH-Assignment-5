@@ -14,6 +14,20 @@ document.getElementById('donateBoxBtn1')
          let newBalance = balance -= donateBoxOneValue;
          document.getElementById('campOneCollection').innerText = TotalCampOneCollection;
          document.getElementById('Balance').innerText = newBalance;
+         const date = new Date();
+         
+        //add transaction history
+        const div = document.createElement('div');
+        div.classList.add( 'border', 'border-black', 'p-4', 'rounded-md', 'mb-4');
+        div.innerHTML = `
+        <h4 class="font-bold text-lg">${donateBoxOneValue} Taka is Donated for Flood at Noakhali, Bangladesh</h4>
+        <p>${date}</p>
+        `;
+
+         document.getElementById('history').appendChild(div);
+
+
+
        }else{
         alert("Insufficent Balance!!!");
 
@@ -63,28 +77,22 @@ document.getElementById('donateBoxBtn3')
 
 document.getElementById('show-history')
 .addEventListener('click', function() {
-    // Show history section
     showSectionById('history');
-
-    // Change the clicked button's background color to light green
     this.style.backgroundColor = 'lightgreen';
-
-    // Reset the donation button to its original state (default style)
     document.getElementById('show-donation').style.backgroundColor = '';
 });
 
 document.getElementById('show-donation')
 .addEventListener('click', function() {
-    // Show donation section
     showSectionById('donation');
-
-    // Change the clicked button's background color to light green
     this.style.backgroundColor = 'lightgreen';
-
-    // Reset the history button to its original state (default style)
     document.getElementById('show-history').style.backgroundColor = '';
 });
 
 
 
+
+
+
+ 
 
