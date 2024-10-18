@@ -50,6 +50,17 @@ document.getElementById('donateBoxBtn2')
         let newBalance = balance -= donateBoxTwoValue;
         document.getElementById('campTwoCollection').innerText = TotalCampTwoCollection;
         document.getElementById('Balance').innerText = newBalance;
+        const date = new Date();
+
+        //add transaction history
+        const div = document.createElement('div');
+        div.classList.add( 'border', 'border-black', 'p-4', 'rounded-md', 'mb-4');
+        div.innerHTML = `
+        <h4 class="font-bold text-lg">${donateBoxTwoValue} Taka is Donated for  Flood Relief in Feni,Bangladesh</h4>
+        <p>${date}</p>
+        `;
+
+         document.getElementById('history').appendChild(div);
     }else{
         alert("Insufficent Balance!!!");
     }
@@ -69,6 +80,18 @@ document.getElementById('donateBoxBtn3')
         let newBalance = balance -= donateBoxThreeValue;
         document.getElementById('campThreeCollection').innerText = TotalCampThreeCollection;
         document.getElementById('Balance').innerText = newBalance;
+        const date = new Date();
+
+         //add transaction history
+        const div = document.createElement('div');
+        div.classList.add( 'border', 'border-black', 'p-4', 'rounded-md', 'mb-4');
+        div.innerHTML = `
+        <h4 class="font-bold text-lg">${donateBoxThreeValue} Taka is Donated for Injured in the Quota Movement</h4>
+        <p>${date}</p>
+        `;
+
+         document.getElementById('history').appendChild(div);
+       
      }else{
         alert("Insufficent Balance!!!");
      }

@@ -10,28 +10,30 @@
 </head>
 <body>
     <!-- header start -->
-    <div class="navbar justify-around" style="background: rgb(249, 247, 243);">
-        <div class="navbar-start">
-            <a href="../View/blog.html" id="blogButton" class="btn btn-light-green-blog ml-32">Go to Blog</a>
+    <header class="bg-white sticky top-0 w-full  z-50 pb-4"> 
+        <div class="navbar justify-around" style="background: rgb(249, 247, 243);">
+            <div class="navbar-start">
+                <a href="../View/blog.html" id="blogButton" class="btn btn-light-green-blog ml-32">Go to Blog</a>
+            </div>
+            <div class="flex-1">
+                <img src="../assets/logo.png" alt="">
+                <p class="ml-2 font-bold text-xl">Donate Bangladesh</p>
+            </div>
+            <div class="flex-none">
+                <ul class="menu menu-horizontal px-1">
+                    <img src="../assets/coin.png" alt="">
+                    <li id="Balance" class="mr-32 font-bold text-base ml-2">5500 BDT</li>
+                </ul>
+            </div>
         </div>
-        <div class="flex-1">
-            <img src="../assets/logo.png" alt="">
-            <p class="ml-2 font-bold text-xl">Donate Bangladesh</p>
+        <!-- header end -->
+        <!-- Navigation button -->
+        <div class="flex justify-center mt-8">
+            <button id="show-donation" class="btn font-bold" style="background-color: lightgreen;">Donation</button>
+            <button id="show-history" class="btn font-bold ml-4">History</button>
         </div>
-        <div class="flex-none">
-            <ul class="menu menu-horizontal px-1">
-                <img src="../assets/coin.png" alt="">
-                <li id="Balance" class="mr-32 font-bold text-base ml-2">5500 BDT</li>
-            </ul>
-        </div>
-    </div>
-    <!-- header end -->
-    <!-- Navigation button -->
-    <div class="flex justify-center mt-12">
-        <button id="show-donation" class="btn font-bold" style="background-color: lightgreen;">Donation</button>
-        <button id="show-history" class="btn font-bold ml-4">History</button>
-    </div>
 
+    </header>
 
 
     <!-- card container/body start here -->
