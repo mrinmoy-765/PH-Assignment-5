@@ -8,6 +8,13 @@ document.getElementById('donateBoxBtn1')
         let donateBoxOneValue = getInputFieldValueById('donateBox1');
         let balance = getTextFieldValueById('Balance');
 
+         // Check if the value is empty or NaN
+        if (!donateBoxOneValue || isNaN(donateBoxOneValue)) {
+            alert('Please enter a valid number');
+            document.getElementById('donateBox1').value = "";  // Clear input field
+             return;
+        }
+
         if(donateBoxOneValue <= balance){
             let campOneCollection = getTextFieldValueById('campOneCollection');
             let TotalCampOneCollection = campOneCollection += donateBoxOneValue;
@@ -42,6 +49,13 @@ document.getElementById('donateBoxBtn2')
      const donateBoxTwoValue = getInputFieldValueById('donateBox2');
      let balance = getTextFieldValueById('Balance');
 
+       // Check if the value is empty or NaN
+        if (!donateBoxOneValue || isNaN(donateBoxTwoValue)) {
+            alert('Please enter a valid number');
+            document.getElementById('donateBox2').value = "";  // Clear input field
+             return;
+        }
+
 
     if(donateBoxTwoValue <= balance){
         let campTwoCollection = getTextFieldValueById('campTwoCollection');
@@ -74,6 +88,13 @@ document.getElementById('donateBoxBtn3')
 
      const donateBoxThreeValue = getInputFieldValueById('donateBox3');
      let balance = getTextFieldValueById('Balance');
+
+       // Check if the value is empty or NaN
+        if (!donateBoxOneValue || isNaN(donateBoxThreeValue)) {
+            alert('Please enter a valid number');
+            document.getElementById('donateBox3').value = "";  // Clear input field
+             return;
+        }
    
      if(donateBoxThreeValue <= balance){
         let campThreeCollection = getTextFieldValueById('campThreeCollection');
