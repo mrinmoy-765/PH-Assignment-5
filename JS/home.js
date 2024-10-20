@@ -1,41 +1,39 @@
-import { getInputFieldValueById, showSectionById } from './utils.js';
+import { closePopup, getInputFieldValueById, openPopup, showSectionById } from './utils.js';
 import { getTextFieldValueById } from './utils.js';
 
 document.getElementById('donateBoxBtn1')
-.addEventListener(`click`, function(event){
-    event.preventDefault();
+    .addEventListener(`click`, function(event){
+        event.preventDefault();
 
-     let donateBoxOneValue = getInputFieldValueById('donateBox1');
-     let balance = getTextFieldValueById('Balance');
+        let donateBoxOneValue = getInputFieldValueById('donateBox1');
+        let balance = getTextFieldValueById('Balance');
 
-       if(donateBoxOneValue <= balance){
-         let campOneCollection = getTextFieldValueById('campOneCollection');
-         let TotalCampOneCollection = campOneCollection += donateBoxOneValue;
-         let newBalance = balance -= donateBoxOneValue;
-         document.getElementById('campOneCollection').innerText = TotalCampOneCollection;
-         document.getElementById('Balance').innerText = newBalance;
-         document.getElementById('donateBox1').value = "";
-         const date = new Date();
-         
-        //add transaction history
-        const div = document.createElement('div');
-        div.classList.add( 'border', 'border-black', 'p-4', 'rounded-md', 'mb-4');
-        div.innerHTML = `
-        <h4 class="font-bold text-lg">${donateBoxOneValue} Taka is Donated for Flood at Noakhali, Bangladesh</h4>
-        <p>${date}</p>
-        `;
+        if(donateBoxOneValue <= balance){
+            let campOneCollection = getTextFieldValueById('campOneCollection');
+            let TotalCampOneCollection = campOneCollection += donateBoxOneValue;
+            let newBalance = balance -= donateBoxOneValue;
+            document.getElementById('campOneCollection').innerText = TotalCampOneCollection;
+            document.getElementById('Balance').innerText = newBalance;
+            document.getElementById('donateBox1').value = "";  
+            openPopup();  
 
-         document.getElementById('history').appendChild(div);
+            // Add transaction history
+            const date = new Date();
+            const div = document.createElement('div');
+            div.classList.add('border', 'border-black', 'p-4', 'rounded-md', 'mb-4');
+            div.innerHTML = `
+                <h4 class="font-bold text-lg">${donateBoxOneValue} Taka is Donated for Flood at Noakhali, Bangladesh</h4>
+                <p>${date}</p>
+            `;
+
+            document.getElementById('history').appendChild(div);
+
+        } else {
+            alert("Insufficient Balance!!!");
+        }
+    });
 
 
-
-       }else{
-        alert("Insufficent Balance!!!");
-
-       }
-     
-
-})
 
 document.getElementById('donateBoxBtn2')
 .addEventListener(`click`, function(event){
@@ -53,6 +51,7 @@ document.getElementById('donateBoxBtn2')
         document.getElementById('Balance').innerText = newBalance;
         document.getElementById('donateBox2').value = "";
         const date = new Date();
+        openPopup();  
 
         //add transaction history
         const div = document.createElement('div');
@@ -84,7 +83,7 @@ document.getElementById('donateBoxBtn3')
         document.getElementById('Balance').innerText = newBalance;
         document.getElementById('donateBox3').value = "";
         const date = new Date();
-
+        openPopup();  
          //add transaction history
         const div = document.createElement('div');
         div.classList.add( 'border', 'border-black', 'p-4', 'rounded-md', 'mb-4');
@@ -95,7 +94,8 @@ document.getElementById('donateBoxBtn3')
 
          document.getElementById('history').appendChild(div);
        
-     }else{
+     }
+     else{
         alert("Insufficent Balance!!!");
      }
    
@@ -120,5 +120,15 @@ document.getElementById('show-donation')
 
 
 
+
+
+
+
+
+
+
+
+                
+            
  
 

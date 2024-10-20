@@ -19,3 +19,15 @@ export function showSectionById(id){
     document.getElementById(id).classList.remove('hidden');
 }
 
+
+
+
+export function openPopup() {
+    document.getElementById("popup").classList.add("open-popup");
+    document.getElementById("popup").classList.remove("hidden");
+}
+
+export function closePopup(){
+    document.getElementById("popup").classList.add("hidden");
+    document.getElementById("popup").classList.remove("open-popup");
+}
